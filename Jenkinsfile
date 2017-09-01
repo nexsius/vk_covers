@@ -1,10 +1,20 @@
 pipeline {
-    agent { docker 'maven:3-alpine' } 
+    agent none
     stages {
+        stage('get sources') {
+            steps {
+                git 'https://github.com/nexsius/vk_covers.git'
+            }
+    }
         stage('build') {
             steps {
-                sh 'java -version'
+                sh "/usr/bin/mvn clean compile install"
+            }
+    }
+        stage('results') {
+            steps {
+               sh "echo done"
             }
         }
-    }
+        
 }
