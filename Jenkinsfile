@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('get sources') {
             steps {
-                git 'https://github.com/nexsius/vk_covers.git'
+                git clone 'https://github.com/nexsius/vk_covers.git'
             }
     }
         stage('build') {
@@ -14,6 +14,8 @@ pipeline {
         stage('results') {
             steps {
                sh "echo done"
+               sh 'ls -al target'
+               sh 'pwd'
             }
         }
         
