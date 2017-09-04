@@ -97,13 +97,19 @@ public class lastuser {
                            Font dynamicFont42Pt = dynamicFont.deriveFont(62f);
                            g.setFont(dynamicFont42Pt);
                            g.drawString(String.valueOf(days), 821, 365);
-                           if (days == 1) {
+                           if (days % 10 == 1 && days % 100 != 11 ) {
                                g.drawString("день", 881, 365);
-                           } else if (days > 1 && days < 5) {
+                           } else if (days % 10 >= 2 && days % 10 <= 4 && days % 100 != 12 || days % 100 != 13 || days % 100 != 14 ) {
                                g.drawString("дня", 881, 365);
                            } else {
                                g.drawString("дней", 881, 365);
                            }
+
+           //                few -> n mod 10 in 2..4 and n mod 100 not in 12..14;
+//                      #   many -> n mod 10 is 0 or n mod 10 in 5..9 or n mod 100 in 11..14;
+
+                          // n % 10 == 1 && n % 100 != 11 ? :one : [2, 3, 4].include?(n % 10) && ![12, 13, 14].include?(n % 100) ? :few : n % 10 == 0 || [5, 6, 7, 8, 9].include?(n % 10) || [11, 12, 13, 14].include?(n % 100) ? :many : :other
+
                            g.setFont(dynamicFont14Pt);
                        }
                    }
