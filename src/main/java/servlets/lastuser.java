@@ -103,6 +103,7 @@ public class lastuser {
                                g.drawString("день", 881, 365);
                            } else if (!String.valueOf(days).endsWith("0") && days % 10 >= 2 && days % 10 <= 4 && days % 100 != 12 || days % 100 != 13 || days % 100 != 14 ) {
                                System.out.println("дня");
+
                                g.drawString("дня", 881, 365);
                            } else {
                                g.drawString("дней", 881, 365);
