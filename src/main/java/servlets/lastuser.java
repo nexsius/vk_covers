@@ -97,6 +97,7 @@ public class lastuser {
                            Font dynamicFont42Pt = dynamicFont.deriveFont(62f);
                            g.setFont(dynamicFont42Pt);
                            g.drawString(String.valueOf(days), 821, 365);
+                           System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                            if (days % 10 == 1 && days % 100 != 11 ) {
                                System.out.println("День");
                                g.drawString("день", 881, 365);
