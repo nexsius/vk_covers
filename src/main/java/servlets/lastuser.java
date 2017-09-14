@@ -110,6 +110,8 @@ public class lastuser {
 
                            //Редактируем код и пушим на гитхаб
 
+                           
+
            //                few -> n mod 10 in 2..4 and n mod 100 not in 12..14;
 //                      #   many -> n mod 10 is 0 or n mod 10 in 5..9 or n mod 100 in 11..14;
 
