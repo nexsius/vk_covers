@@ -96,26 +96,7 @@ public class lastuser {
                            g.drawString("До ближайшего концерта ", 208, 365);
                            Font dynamicFont42Pt = dynamicFont.deriveFont(62f);
                            g.setFont(dynamicFont42Pt);
-                           g.drawString(String.valueOf(days), 821, 365);
-                           System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                           if (days % 10 == 1 && days % 100 != 11 ) {
-                               System.out.println("День");
-                               g.drawString("день", 881, 365);
-                           } else if (!String.valueOf(days).endsWith("0") && days % 10 >= 2 && days % 10 <= 4 && days % 100 != 12 || days % 100 != 13 || days % 100 != 14 ) {
-                               System.out.println("дня");
-                               g.drawString("дня", 881, 365);
-                           } else {
-                               g.drawString("дней", 881, 365);
-                           }
-
-                           //Редактируем код и пушим на гитхаб
-
-                           
-
-           //                few -> n mod 10 in 2..4 and n mod 100 not in 12..14;
-//                      #   many -> n mod 10 is 0 or n mod 10 in 5..9 or n mod 100 in 11..14;
-
-                          // n % 10 == 1 && n % 100 != 11 ? :one : [2, 3, 4].include?(n % 10) && ![12, 13, 14].include?(n % 100) ? :few : n % 10 == 0 || [5, 6, 7, 8, 9].include?(n % 10) || [11, 12, 13, 14].include?(n % 100) ? :many : :other
+                           g.drawString(plural(days), 821, 365);
 
                            g.setFont(dynamicFont14Pt);
                        }
@@ -135,6 +116,18 @@ public class lastuser {
          return answ;
         }
 
+    private static String plural(int days) {
+
+        int days100 = days % 100;
+        int days10 = days % 10;
+
+        if (days100 > 10 && days100 < 20) return  String.valueOf(days) + " дней";
+        if (days10 > 1 && days10  < 5) return String.valueOf(days) + " дня";
+        if (days10 == 1) return String.valueOf(days) + " день";
+        return  String.valueOf(days) + " дней";
+
+    }
+
         public static String getJson(String sendUrl){
             URL url;
             HttpURLConnection conn;
@@ -145,6 +138,7 @@ public class lastuser {
                 url = new URL(sendUrl);
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
+
                 rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 while ((line = rd.readLine()) != null) {
                     result += line;
