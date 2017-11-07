@@ -45,6 +45,7 @@ import org.json.*;
         protected void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
             response.setContentType("text/html");
+            lastuser.writeSplash();
 
             PrintWriter out = response.getWriter();
             out.println(getJson);
