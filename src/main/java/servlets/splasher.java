@@ -26,8 +26,10 @@ import org.json.*;
             String line = null;
             try {
                 BufferedReader reader = request.getReader();
-                while ((line = reader.readLine()) != null)
-                    jb.append(line);
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                jb.append(line);
+            }
             } catch (Exception e) { /*report an error*/ }
 
             getJson = jb.toString();
