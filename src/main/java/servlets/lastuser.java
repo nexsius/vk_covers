@@ -68,7 +68,7 @@ public class lastuser {
 
                for (int i = 0; i < months.size(); i++) {
                    if (i == 0) {
-                       String d_fin = months.get(i).text() + ".2017";
+                       String d_fin = months.get(i).text() + ".2018";
                        System.out.println("!!!! d_fin " + d_fin);
                        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 

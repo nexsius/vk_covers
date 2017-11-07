@@ -14,7 +14,7 @@ import org.json.*;
 
 
 
-    @WebServlet("/vk")
+    @WebServlet("/")
     public class splasher extends HttpServlet {
 
         String getJson;
@@ -47,6 +47,6 @@ import org.json.*;
             PrintWriter out = response.getWriter();
             out.println(getJson);
 
-            out.println(lastuser.writeSplash());
+            out.println("Hello!");
         }
     }
