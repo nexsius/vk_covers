@@ -96,14 +96,8 @@ public class lastuser {
                            g.drawString("До ближайшего концерта ", 208, 365);
                            Font dynamicFont42Pt = dynamicFont.deriveFont(62f);
                            g.setFont(dynamicFont42Pt);
-                           g.drawString(String.valueOf(days), 821, 365);
-                           if (days == 1) {
-                               g.drawString("день", 881, 365);
-                           } else if (days > 1 && days < 5) {
-                               g.drawString("дня", 881, 365);
-                           } else {
-                               g.drawString("дней", 881, 365);
-                           }
+                           g.drawString(plural(days), 821, 365);
+
                            g.setFont(dynamicFont14Pt);
                        }
                    }
@@ -122,6 +116,18 @@ public class lastuser {
          return answ;
         }
 
+    private static String plural(int days) {
+
+        int days100 = days % 100;
+        int days10 = days % 10;
+
+        if (days100 > 10 && days100 < 20) return  String.valueOf(days) + " дней";
+        if (days10 > 1 && days10  < 5) return String.valueOf(days) + " дня";
+        if (days10 == 1) return String.valueOf(days) + " день";
+        return  String.valueOf(days) + " дней";
+
+    }
+
         public static String getJson(String sendUrl){
             URL url;
             HttpURLConnection conn;
@@ -132,6 +138,7 @@ public class lastuser {
                 url = new URL(sendUrl);
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
+
                 rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 while ((line = rd.readLine()) != null) {
                     result += line;
