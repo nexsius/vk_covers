@@ -26,6 +26,7 @@ public class lastuser {
          //static String TOKEN="30fe43b4979b91b4375c7cb1864dd4f87a7b7e049489dcf89b975edaaea6c174ca5c0adc867fb3525dc9e";
       //  токен группы МП
         static String TOKEN = "6e9a494d126d2d0e7d3d4912094d97d27573c9cdcd00a66a6d7de5992a008ea2978712dbc1c844240c800";
+
       // id креативные обложки
          //static String groupID="122772291";
      //   Айди группы МП
@@ -111,6 +112,7 @@ public class lastuser {
            catch (Exception e) {
                System.out.println(e.toString());
            }
+
            sendCover("//opt//tomcat//sources//cover_new.jpg");
 
          return answ;
@@ -186,6 +188,7 @@ public class lastuser {
                 try{
                     answ = getJson("https://api.vk.com/method/photos.saveOwnerCoverPhoto?hash="+ hash +"&photo="+ photo +"&access_token="+ TOKEN +"&v=5.65");
 
+                    System.out.println("IMAGE SEND!!!!!!");
                 }
                 catch (Exception e) {
                     System.out.println(e.toString());
