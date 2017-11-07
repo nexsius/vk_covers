@@ -48,6 +48,5 @@ import org.json.*;
             out.println(getJson);
             out.println("Success!");
 
-            out.println("Hello!");
         }
     }

@@ -105,6 +105,7 @@ public class lastuser {
 
                    g.drawString( months.get(i).text() + " " + titles.get(i).text(), 208, (i * 42) + 80);
                }
+               System.out.println("WRITING IMAGE!");
 
                ImageIO.write(result, "JPG", new File("//opt//tomcat//sources//cover_new.jpg"));
 
@@ -112,6 +113,8 @@ public class lastuser {
            catch (Exception e) {
                System.out.println(e.toString());
            }
+
+        System.out.println("SENDING IMAGE");
 
            sendCover("//opt//tomcat//sources//cover_new.jpg");
 
