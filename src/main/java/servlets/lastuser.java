@@ -95,7 +95,8 @@ public class lastuser {
 
                    while (rs.next()) {
 
-                       System.out.println(rs.toString());
+                       System.out.println(rs.getString(1) + " " + rs.getString(2));
+
 
                        months.add(rs.getString(1));
                        titles.add(rs.getString(2));
