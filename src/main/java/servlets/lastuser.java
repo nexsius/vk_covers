@@ -102,6 +102,8 @@ public class lastuser {
                        titles.add(rs.getString(2));
                        descr.add(rs.getString(3));
 
+                       System.out.println("months: " + months.get(0));
+
 
                    }
 
