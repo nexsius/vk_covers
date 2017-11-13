@@ -40,9 +40,9 @@ public class lastuser {
         static String answ;
 
 
-    private static ArrayList<String> months;
-    private static ArrayList<String> titles;
-    private static ArrayList<String> descr;
+    private static ArrayList<String> months = new ArrayList<String>();
+    private static ArrayList<String> titles = new ArrayList<String>();
+    private static ArrayList<String> descr = new ArrayList<String>();
 
     private static final String url = "jdbc:mysql://web.nexs.me:3306/mp_afisha?useSSL=false";
     private static final String user = "afisha";
@@ -179,7 +179,7 @@ public class lastuser {
 
         System.out.println("SENDING IMAGE");
 
-          // sendCover("//opt//tomcat//sources//cover_new.jpg");
+           sendCover("//opt//tomcat//sources//cover_new.jpg");
 
          return answ;
         }
