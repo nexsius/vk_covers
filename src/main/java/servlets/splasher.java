@@ -50,7 +50,6 @@ import org.json.*;
             PrintWriter out = response.getWriter();
             out.println(getJson);
             out.println("Success!");
-            out.println("HELLO FROM JENKINS");
 
         }
     }
