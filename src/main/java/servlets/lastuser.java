@@ -56,6 +56,8 @@ public class lastuser {
     public static String writeSplash () throws IOException {
 
            try {
+               Class.forName("com.mysql.jdbc.Driver");
+               System.out.println("Driver loaded");
                BufferedImage background_image = ImageIO.read(new File("//opt//tomcat//sources//cover.jpg"));
 
                System.out.println("Image loaded");
