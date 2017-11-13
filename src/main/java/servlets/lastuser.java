@@ -102,7 +102,7 @@ public class lastuser {
                        titles.add(rs.getString(2));
                        descr.add(rs.getString(3));
 
-                       System.out.println("months: " + months.get(0));
+                       System.out.println("months: " + months.size());
 
 
                    }
@@ -112,6 +112,7 @@ public class lastuser {
                    titles.add(sqlEx.getMessage());
                } finally {
                    //close connection ,stmt and resultset here
+                   System.out.println("MONTH: " + months.toString());
                    try { con.close(); } catch(SQLException se) { /*can't do anything */ }
                    try { stmt.close(); } catch(SQLException se) { /*can't do anything */ }
                    try { rs.close(); } catch(SQLException se) { /*can't do anything */ }
