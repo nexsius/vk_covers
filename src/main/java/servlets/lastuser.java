@@ -167,6 +167,7 @@ public class lastuser {
                    }
 
                    g.drawString( months.get(i) + " " + titles.get(i), 208, (i * 42) + 80);
+                   g.drawString(descr.get(i), 215, (i * 42) + 90);
                }
                System.out.println("WRITING IMAGE!");
 
