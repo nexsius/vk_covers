@@ -50,7 +50,7 @@ import org.json.*;
 
             PrintWriter out = response.getWriter();
             out.println(getJson);
-            out.println("Success! with DB");
+            out.println("Success!");
 
         }
     }
