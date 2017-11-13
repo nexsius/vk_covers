@@ -44,7 +44,7 @@ public class lastuser {
     private static ArrayList<String> titles;
     private static ArrayList<String> descr;
 
-    private static final String url = "jdbc:mysql://web.nexs.me:3306/";
+    private static final String url = "jdbc:mysql://web.nexs.me:3306/mp_afisha?useSSL=false";
     private static final String user = "afisha";
     private static final String password = "Y.BiydE7N";
 
