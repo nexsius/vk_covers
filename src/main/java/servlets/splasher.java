@@ -45,11 +45,12 @@ import org.json.*;
         protected void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
             response.setContentType("text/html");
+            System.out.println("PREPARING SPLASH.....");
             lastuser.writeSplash();
 
             PrintWriter out = response.getWriter();
             out.println(getJson);
-            out.println("Success!");
+            out.println("Success! with DB");
 
         }
     }
