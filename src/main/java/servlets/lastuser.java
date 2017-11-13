@@ -102,9 +102,11 @@ public class lastuser {
                        titles.add(rs.getString(2));
                        descr.add(rs.getString(3));
 
+                       System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22");
+
                        System.out.println("months: " + months.size());
 
-
+                       System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22");
                    }
 
                } catch (SQLException sqlEx) {
@@ -117,6 +119,8 @@ public class lastuser {
                    try { stmt.close(); } catch(SQLException se) { /*can't do anything */ }
                    try { rs.close(); } catch(SQLException se) { /*can't do anything */ }
                }
+
+
 
 
 
@@ -175,7 +179,7 @@ public class lastuser {
 
         System.out.println("SENDING IMAGE");
 
-           sendCover("//opt//tomcat//sources//cover_new.jpg");
+          // sendCover("//opt//tomcat//sources//cover_new.jpg");
 
          return answ;
         }
