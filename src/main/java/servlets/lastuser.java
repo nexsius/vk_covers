@@ -16,9 +16,9 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import org.jsoup.*;
-import org.jsoup.nodes.*;
-import org.jsoup.select.*;
+//import org.jsoup.*;
+//import org.jsoup.nodes.*;
+//import org.jsoup.select.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -113,14 +113,14 @@ public class lastuser {
 
 
                //отрисовка динамики
-               Document doc = Jsoup.connect(tourUrlReq).get();
+         //      Document doc = Jsoup.connect(tourUrlReq).get();
 
-               Elements months = doc.getElementsByClass("f-s_18");
-               Elements titles = doc.getElementsByClass("row f-w_b");
+           //    Elements months = doc.getElementsByClass("f-s_18");
+            //   Elements titles = doc.getElementsByClass("row f-w_b");
 
                for (int i = 0; i < months.size(); i++) {
                    if (i == 0) {
-                       String d_fin = months.get(i).text() + ".2018";
+                       String d_fin = months.get(i) + ".2018";
                        System.out.println("!!!! d_fin " + d_fin);
                        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
@@ -142,7 +142,7 @@ public class lastuser {
                        if (days == 0) {
                            Font dynamicFont42Pt = dynamicFont.deriveFont(62f);
                            g.setFont(dynamicFont42Pt);
-                           g.drawString("Cегодня: " +  titles.get(i).text(), 208, 365);
+                           g.drawString("Cегодня: " +  titles.get(i), 208, 365);
                        } else {
 
                            g.drawString("До ближайшего концерта ", 208, 365);
@@ -154,7 +154,7 @@ public class lastuser {
                        }
                    }
 
-                   g.drawString( months.get(i).text() + " " + titles.get(i).text(), 208, (i * 42) + 80);
+                   g.drawString( months.get(i) + " " + titles.get(i), 208, (i * 42) + 80);
                }
                System.out.println("WRITING IMAGE!");
 
