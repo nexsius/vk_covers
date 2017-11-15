@@ -78,7 +78,7 @@ public class lastuser {
                g.setStroke(new BasicStroke(8));
 
 
-               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a join bands b on (a.band_id = b.band_id) where b.band_name='Марко Поло'";
+               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a where a.band_id=156838463";
 
                try {
                    // opening database connection to MySQL server
