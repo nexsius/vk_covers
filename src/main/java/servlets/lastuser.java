@@ -102,7 +102,7 @@ public class lastuser {
 
                    System.out.println("sorting");
                    while (rs.next()) {
-                       System.out.println("add" + descr.add(rs.getString(3)));
+                       System.out.println("add" + rs.getString(3));
                        months.add(rs.getString(1));
                        titles.add(rs.getString(2));
                        descr.add(rs.getString(3));
