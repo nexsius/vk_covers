@@ -89,12 +89,15 @@ public class lastuser {
                    stmt = con.createStatement();
 
                    // executing SELECT query
-                   rs = stmt.executeQuery(query);
-                   System.out.println("Execute query");
+                   try {
+                       rs = stmt.executeQuery(query);
+                       System.out.println("Execute query:\n" + query);
+                   } catch (Exception e) {
+                       e.printStackTrace();
+                   }
+
 
                    while (rs.next()) {
-
-                       System.out.println(rs.getString(1) + " " + rs.getString(2));
 
 
                        months.add(rs.getString(1));
