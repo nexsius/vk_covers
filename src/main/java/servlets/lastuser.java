@@ -13,9 +13,7 @@ import org.json.*;
 
 import java.sql.*;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 //import org.jsoup.*;
 //import org.jsoup.nodes.*;
 //import org.jsoup.select.*;
@@ -57,6 +55,11 @@ public class lastuser {
 
            try {
                Class.forName("com.mysql.jdbc.Driver");
+               Properties properties=new Properties();
+               properties.setProperty("user","afisha");
+               properties.setProperty("password","Y.BiydE7N");
+               properties.setProperty("useUnicode","true");
+               properties.setProperty("characterEncoding","utf8");
                System.out.println("Driver loaded");
                BufferedImage background_image = ImageIO.read(new File("//opt//tomcat//sources//cover.jpg"));
 
@@ -78,11 +81,11 @@ public class lastuser {
                g.setStroke(new BasicStroke(8));
 
 
-               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a where a.band_id=156838463";
+               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a where a.band_id='Марко Поло'";
 
                try {
                    // opening database connection to MySQL server
-                   con = DriverManager.getConnection(url, user, password);
+                   con = DriverManager.getConnection(url, properties);
                    System.out.println("Connected SQL");
 
                    // getting Statement object to execute query
