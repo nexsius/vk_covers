@@ -78,7 +78,6 @@ public class lastuser {
                g.setStroke(new BasicStroke(8));
 
 
-
                String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a join bands b on (a.band_id = b.band_id) where b.band_name='Марко Поло'";
 
                try {
