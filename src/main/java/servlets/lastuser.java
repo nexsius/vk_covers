@@ -79,7 +79,7 @@ public class lastuser {
 
 
 
-               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a where a.band_id=1";
+               String query = "select date_format(a.date, '%d.%m'), a.place, a.descr_short from afisha a where a.band_name='Марко Поло'";
 
                try {
                    // opening database connection to MySQL server
