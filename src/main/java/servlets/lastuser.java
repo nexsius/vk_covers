@@ -92,23 +92,19 @@ public class lastuser {
                    try {
                        rs = stmt.executeQuery(query);
                        System.out.println("Execute query:\n" + query);
+                       System.out.println(rs.getString(2));
                    } catch (Exception e) {
                        e.printStackTrace();
                    }
 
-
+                   System.out.println("sorting");
                    while (rs.next()) {
-
-
+                       System.out.println("add" + descr.add(rs.getString(3)));
                        months.add(rs.getString(1));
                        titles.add(rs.getString(2));
                        descr.add(rs.getString(3));
 
-                       System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22");
 
-                       System.out.println("months: " + months.size());
-
-                       System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22");
                    }
 
                } catch (SQLException sqlEx) {
