@@ -49,7 +49,7 @@ import org.json.*;
 
             PrintWriter out = response.getWriter();
 
-            if (request.getQueryString().equals("update")) {
+            if (request.getQueryString().length() > 0) {
                 out.println(lastuser.writeSplash());
             } else {
                 out.println("Здесь ничего нет");
