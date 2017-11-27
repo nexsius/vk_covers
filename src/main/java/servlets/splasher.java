@@ -46,11 +46,14 @@ import org.json.*;
                 throws ServletException, IOException {
             response.setContentType("text/html");
             System.out.println("PREPARING SPLASH.....");
-            lastuser.writeSplash();
 
             PrintWriter out = response.getWriter();
-            out.println(getJson);
-            out.println("Success!");
+
+            if (request.getQueryString().equals("update")) {
+                out.println(lastuser.writeSplash());
+            } else {
+                out.println("Здесь ничего нет");
+            }
 
         }
     }
