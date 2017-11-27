@@ -48,8 +48,9 @@ import org.json.*;
             System.out.println("PREPARING SPLASH.....");
 
             PrintWriter out = response.getWriter();
+            System.out.println("QUERYSTRING: " + request.getQueryString());
 
-            if (request.getQueryString().length() > 0) {
+            if (request.getQueryString() != null) {
                 out.println(lastuser.writeSplash());
             } else {
                 out.println("Здесь ничего нет");
