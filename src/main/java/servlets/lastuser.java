@@ -42,7 +42,7 @@ public class lastuser {
     private static ArrayList<String> titles = new ArrayList<String>();
     private static ArrayList<String> descr = new ArrayList<String>();
 
-    private static final String url = "jdbc:mysql://web.nexs.me:3306/mp_afisha?useSSL=false";
+    private static final String url = "jdbc:mysql://nexs.me:3306/mp_afisha?useSSL=false";
     private static final String user = "afisha";
     private static final String password = "Y.BiydE7N";
 
