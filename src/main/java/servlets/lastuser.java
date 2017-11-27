@@ -100,7 +100,7 @@ public class lastuser {
                    try {
                        rs = stmt.executeQuery(query);
                        System.out.println("Execute query:\n" + query);
-                       System.out.println(rs.getString(2));
+            //           System.out.println(rs.getString(2));
                    } catch (Exception e) {
                        e.printStackTrace();
                    }
